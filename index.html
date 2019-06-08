@@ -8,31 +8,34 @@
 		{
 			return 10;
 		}
-		if(x=='a+')
+		else if(x=='a+')
 		{
 			return 9.5;
 		}
-		if(x=='a')
+		else if(x=='a')
 		{
 			return 9;
 		}
-		if(x=='b+')
+		else if(x=='b+')
 		{
 			return 8.5;
 		}
-		if(x=='b')
+		else if(x=='b')
 		{
 			return 8;
 		}
-		if(x=='c')
+		else if(x=='c')
 		{
 			return 7.5;
+		}
+		else{
+			return 0
 		}
 	}
 	// function xxx() {
 	// 	var a = document.getElementById('DL').value;
 	// 	var d = findPoints(a);
-	// 	document.getElementById("demo").innerHTML = d;
+	// 	document.getElementById("grade").innerHTML = d;
 	// }
 	function findFinalGrade(pcntg) {
 		if(pcntg>95)
@@ -94,13 +97,14 @@
 
 		var tempGrade = findPoints(a)+findPoints(b)*2+findPoints(c)*4+findPoints(d)*4+findPoints(e)*4+findPoints(f)*4+findPoints(g)*2+findPoints(h)*2+findPoints(i)*2+findPoints(j)*4+findPoints(k)*4+findPoints(l)*3+findPoints(m)*2+findPoints(n)*2+findPoints(o)*2+findPoints(p)*4+findPoints(q)*4+findPoints(r)*4+findPoints(s)*4+findPoints(t)*4+findPoints(u)*4+findPoints(v)*4+findPoints(w)*8+findPoints(x)*8+findPoints(y)*8;
 		var finalGrade = findFinalGrade((tempGrade/940)*100.0);
-		document.getElementById("demo").innerHTML = "Your final Grade is: "+finalGrade;
+		document.getElementById("grade").innerHTML = "Your final Grade is: "+finalGrade;
+		alert("Your final Grade is: "+finalGrade);
 	}
 </script>
 <body>
 
+<center>
 <h2>MSIT Grade Calculator</h2>
-
 <table>
 	<tr>
 		<td>Digital Literacy</td>
@@ -203,9 +207,9 @@
 		<td><input type="text" id="Prac3"></td>
 	</tr>
 </table>
-
+<br>
 <button type="button" onclick='myFun()'>Check Grade</button>
-<p id="demo"></p>
-
+<p id="grade"></p>
+</center>
 </body>
 </html>
