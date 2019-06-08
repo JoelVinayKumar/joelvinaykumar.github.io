@@ -5,19 +5,19 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet"> 
 </head>
 <style>
-	h5,alert{
-		font-family: 'Roboto';
+	h5,button{
+		font-family: 'Roboto Mono';
 	}
-	 body, html {
-	  font-family: 'Roboto Mono', monospace;
-	  height: 100%;
-	  background-position: center;
-	  background:linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("img.jpg");
-	  background-size: cover;
-	  color: white;
-	  margin: 0;
-	  padding: 0;
-	  position: relative;
+	body, html {
+		font-family: 'Roboto Mono', monospace;
+		height: 125%;
+		background-position: center;
+		background:linear-gradient(0deg,rgb(103, 58, 183,0.6),rgb(156, 39, 176,0.6));
+		background-size: cover;
+		color: white;
+		margin: 0;
+		padding: 0;
+		position: relative;
 
 	}
 </style>
@@ -53,11 +53,7 @@
 			return 0
 		}
 	}
-	// function xxx() {
-	// 	var a = document.getElementById('DL').value;
-	// 	var d = findPoints(a);
-	// 	document.getElementById("grade").innerHTML = d;
-	// }
+
 	function findFinalGrade(pcntg) {
 		if(pcntg>95)
 		{
@@ -235,7 +231,7 @@
 	</tr>
 </table>
 <br>
-<button type="button" onclick='myFun()'>Check Grade</button>
+<button type="button" onclick='myFun()'><p class="op">Check Grade</p></button>
 <p id="grade"></p>
 </center>
 </body>
