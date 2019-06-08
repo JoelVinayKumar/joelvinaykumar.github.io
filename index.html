@@ -1,1 +1,211 @@
-<h1> Hello Joel </h1>
+<!DOCTYPE html>
+<html>
+<script type="text/javascript">
+	function findPoints(s) {
+		var x = s.toLowerCase();
+		console.log(s);
+		if(x=='ex')
+		{
+			return 10;
+		}
+		if(x=='a+')
+		{
+			return 9.5;
+		}
+		if(x=='a')
+		{
+			return 9;
+		}
+		if(x=='b+')
+		{
+			return 8.5;
+		}
+		if(x=='b')
+		{
+			return 8;
+		}
+		if(x=='c')
+		{
+			return 7.5;
+		}
+	}
+	// function xxx() {
+	// 	var a = document.getElementById('DL').value;
+	// 	var d = findPoints(a);
+	// 	document.getElementById("demo").innerHTML = d;
+	// }
+	function findFinalGrade(pcntg) {
+		if(pcntg>95)
+		{
+			return 'Excellent';
+		}
+		else if(pcntg>90)
+		{
+			return 'A+';
+		}
+		else if(pcntg>85)
+		{
+			return 'A';
+		}
+		else if(pcntg>80)
+		{
+			return 'B+';
+		}
+		else if(pcntg>75)
+		{
+			return 'B';
+		}
+		else if(pcntg>70)
+		{
+			return 'C';
+		}
+		else
+		{
+			return 'F'
+		}
+
+	}
+	function myFun() {
+		var a = document.getElementById('DL').value;
+		var b = document.getElementById('CT').value;
+		var c = document.getElementById('CSPP-1').value;
+		var d = document.getElementById('CSPP-2').value;
+		var e = document.getElementById('ADS-1').value;
+		var f = document.getElementById('ADS-2').value;
+		var g = document.getElementById('DBMS').value;
+		var h = document.getElementById('CS').value;
+		var i = document.getElementById('CNF').value;
+		var j = document.getElementById('ICS').value;
+		var k = document.getElementById('SEF').value;
+		var l = document.getElementById('WP').value;
+		var m = document.getElementById('SC').value;
+		var n = document.getElementById('MP').value;
+		var o = document.getElementById('CC').value;
+		var p = document.getElementById('Prac').value;
+		var q = document.getElementById('CP').value;
+		var r = document.getElementById('DA').value;
+		var s = document.getElementById('Sp1').value;
+		var t = document.getElementById('Sp2').value;
+		var u = document.getElementById('Sp3').value;
+		var v = document.getElementById('Sp4').value;
+		var w = document.getElementById('Prac1').value;
+		var x = document.getElementById('Prac2').value;
+		var y = document.getElementById('Prac3').value;
+
+		var tempGrade = findPoints(a)+findPoints(b)*2+findPoints(c)*4+findPoints(d)*4+findPoints(e)*4+findPoints(f)*4+findPoints(g)*2+findPoints(h)*2+findPoints(i)*2+findPoints(j)*4+findPoints(k)*4+findPoints(l)*3+findPoints(m)*2+findPoints(n)*2+findPoints(o)*2+findPoints(p)*4+findPoints(q)*4+findPoints(r)*4+findPoints(s)*4+findPoints(t)*4+findPoints(u)*4+findPoints(v)*4+findPoints(w)*8+findPoints(x)*8+findPoints(y)*8;
+		var finalGrade = findFinalGrade((tempGrade/940)*100.0);
+		document.getElementById("demo").innerHTML = "Your final Grade is: "+finalGrade;
+	}
+</script>
+<body>
+
+<h2>MSIT Grade Calculator</h2>
+
+<table>
+	<tr>
+		<td>Digital Literacy</td>
+		<td><input type="text" id="DL"></td>
+	</tr>
+	<tr>
+		<td>Computational Thinking</td>
+		<td><input type="text" id="CT"></td>
+	</tr>
+	<tr>
+		<td>CSPP-1</td>
+		<td><input type="text" id="CSPP-1"></td>
+	</tr>
+	<tr>
+		<td>CSPP-2</td>
+		<td><input type="text" id="CSPP-2"></td>
+	</tr>
+	<tr>
+		<td>ADS-1</td>
+		<td><input type="text" id="ADS-1"></td>
+	</tr>
+	<tr>
+		<td>ADS-2</td>
+		<td><input type="text" id="ADS-2"></td>
+	</tr>
+	<tr>
+		<td>DBMS</td>
+		<td><input type="text" id="DBMS"></td>
+	</tr>
+	<tr>
+		<td>Cyber Security</td>
+		<td><input type="text" id="CS"></td>
+	</tr>
+	<tr>
+		<td>Computer Networks Foundation</td>
+		<td><input type="text" id="CNF"></td>
+	</tr>
+	<tr>
+		<td>ICS</td>
+		<td><input type="text" id="ICS"></td>
+	</tr>
+	<tr>
+		<td>SEF</td>
+		<td><input type="text" id="SEF"></td>
+	</tr>
+	<tr>
+		<td>Web Programming</td>
+		<td><input type="text" id="WP"></td>
+	</tr>
+	<tr>
+		<td>Social Computing</td>
+		<td><input type="text" id="SC"></td>
+	</tr>
+	<tr>
+		<td>Mobile Programming</td>
+		<td><input type="text" id="MP"></td>
+	</tr>
+	<tr>
+		<td>Cloud Computing</td>
+		<td><input type="text" id="CC"></td>
+	</tr>
+	<tr>
+		<td>Practicum</td>
+		<td><input type="text" id="Prac"></td>
+	</tr>
+	<tr>
+		<td>Competetive Programming</td>
+		<td><input type="text" id="CP"></td>
+	</tr>
+	<tr>
+		<td>Data Analytics</td>
+		<td><input type="text" id="DA"></td>
+	</tr>
+	<tr>
+		<td>Specialization - 1</td>
+		<td><input type="text" id="Sp1"></td>
+	</tr>
+	<tr>
+		<td>Specialization - 2</td>
+		<td><input type="text" id="Sp2"></td>
+	</tr>
+	<tr>
+		<td>Specialization - 3</td>
+		<td><input type="text" id="Sp3"></td>
+	</tr>
+	<tr>
+		<td>Specialization - 4</td>
+		<td><input type="text" id="Sp4"></td>
+	</tr>
+	<tr>
+		<td>Practicum - 1</td>
+		<td><input type="text" id="Prac1"></td>
+	</tr>
+	<tr>
+		<td>Practicum - 2</td>
+		<td><input type="text" id="Prac2"></td>
+	</tr>
+	<tr>
+		<td>Practicum - 3</td>
+		<td><input type="text" id="Prac3"></td>
+	</tr>
+</table>
+
+<button type="button" onclick='myFun()'>Check Grade</button>
+<p id="demo"></p>
+
+</body>
+</html>
