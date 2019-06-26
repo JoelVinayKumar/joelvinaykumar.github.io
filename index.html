@@ -114,7 +114,7 @@
 
 		var tempGrade = findPoints(a)+findPoints(b)*2+findPoints(c)*4+findPoints(d)*4+findPoints(e)*4+findPoints(f)*4+findPoints(g)*2+findPoints(h)*2+findPoints(i)*2+findPoints(j)*4+findPoints(k)*4+findPoints(l)*3+findPoints(m)*2+findPoints(n)*2+findPoints(o)*2+findPoints(p)*4+findPoints(q)*4+findPoints(r)*4+findPoints(s)*4+findPoints(t)*4+findPoints(u)*4+findPoints(v)*4+findPoints(w)*8+findPoints(x)*8+findPoints(y)*8;
 		var finalGrade = findFinalGrade((tempGrade/940)*100.0);
-		document.getElementById("grade").innerHTML = "Your final Grade is: "+finalGrade;
+		document.getElementById("grade").innerHTML = "Your final Grade is: "+finalGrade+"\nCGPA: "+(tempGrade/940)*100.0;
 		if(finalGrade=='F'){
 			alert("Sorry, You got F. ")
 		}
